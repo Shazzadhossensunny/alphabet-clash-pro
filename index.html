@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Clash Pro</title>
+    <!-- tailwind & daisyUI cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- style.css -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="bg-[#010313] min-h-dvh bg-[url('./images/background.png')] bg-no-repeat bg-center">
+        <!-- play start section start -->
+        <div id="play-start" class="flex justify-center items-center h-screen">
+            <div class="text-white text-center">
+                <h1 class="text-[170px] font-[anton]">ALPHABET CLASH</h1>
+                <p class="text-2xl font-[poppins] font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick=" playBtn()" class="py-5 px-8 bg-white rounded-lg text-2xl font-semibold font-[poppins] text-[#010313] mt-14">Play Now</button>
+            </div>
+        </div>
+        <!-- play start section end -->
+        <!-- game play board section start -->
+        <div id="play-board" class="hidden">
+            <!-- screen start -->
+            <div class="flex justify-center pt-24">
+                <div class="artboard artboard-horizontal phone-6 rounded-2xl border-[20px] border-[#010313CC] bg-[#ffffffB3]">
+                    <div class="flex justify-center">
+                        <p class="text-white font-[poppins] text-lg font-medium bg-[#2F2941] rounded-b-xl pb-4 px-8">Don't watch keyboard  while playing...</p>
+                    </div>
+                    <div class="flex justify-center items-center h-full">
+                        <h3 id="show-alphabet" class="text-[128px] text-[#010313] font-semibold font-[poppins] uppercase">Y</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- screen end -->
+            <!-- keyboard star -->
+            <div class="pt-24">
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                  </div>
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                  </div>
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                  </div>
+            </div>
+            <!-- keyboard end -->
+            <!-- life & score btn start -->
+            <div class="flex justify-around items-center  py-24">
+                <button class="bg-[#894189] py-4 px-9 text-xl font-medium font-[poppins] text-white flex gap-2 items-center rounded-full">Life
+                    <img src="images/heart.svg" alt="">
+                    <span id="life-update">5</span>
+                </button>
+                <button class="bg-[#894189] py-4 px-9 text-xl font-medium font-[poppins] text-white flex gap-2 items-center rounded-full">Score
+                    <img src="images/doller.svg" alt="">
+                    <span id="score-update">0</span>
+                </button>
+            </div>
+            <!-- life & score btn end -->
+        </div>
+        <!-- game play board section end -->
+        <!-- score section start -->
+        <div id="final-score" class="flex justify-center items-center h-screen hidden">
+            <div class="space-y-6 border border-[#ffffff33] bg-gradient-to-r from-[#ffffff33] to-[#98979700] text-center p-11 rounded-2xl">
+                <h3 class="text-white text-3xl font-semibold font-[poppins]">Game Over😥😥😥</h3>
+                <h2 class="text-white text-6xl font-semibold font-[poppins]">Score : <span id="final-game-score" class="font-medium">14</span></h2>
+                <button onclick="playAgain()" class="py-5 px-8 bg-white rounded-lg text-2xl font-semibold font-[poppins] text-[#010313]">Play Now</button>
+                <p class="text-2xl font-[poppins] font-medium text-white">Practice will make you Pro</p>
+            </div>
+        </div>
+
+        <!-- score section end -->
+    </main>
+<script src="js/script.js"></script>
+</body>
+</html>

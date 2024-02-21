@@ -10,6 +10,6 @@
   .kbd {
     font-size: 28px;
 }
-.artboard.phone-6.artboard-horizontal, .artboard.phone-6.horizontal {
-    height: 400px;
+#model{
+  display: none;
 }
